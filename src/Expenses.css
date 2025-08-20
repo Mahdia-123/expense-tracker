@@ -22,6 +22,18 @@ select {
   padding: 8px;
   border: 1px solid #93b554;
 }
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #93b554;
+  border-radius: 5px;
+  font-size: 16px;
+  appearance: none; /* removes default arrow in some browsers */
+  background: white
+    url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
+    no-repeat right 10px center;
+  background-size: 16px;
+}
 
 .btn {
   background-color: #93b554;
