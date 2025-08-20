@@ -64,7 +64,7 @@ export default function Expenses() {
           </button>
         </div>
       </div>
-      <h3>Expenses</h3>
+      <h3 style={{ display: total > 0 ? "block" : "none" }}>Expenses</h3>
       <section>
         <ol>
           {expense.map(function (e, index) {

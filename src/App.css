@@ -5,12 +5,12 @@ body {
   padding: 0;
 }
 body {
-  min-height: 100vh; /* full viewport height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../public/images/iStock-576605112.webp"); /* image from public folder */
-  background-size: cover; /* cover entire div */
+    url("../public/images/Top-Business-Credit-Cards-jpg.webp");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
