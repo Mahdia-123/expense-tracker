@@ -52,10 +52,8 @@ select {
   cursor: pointer;
 }
 section {
-  max-height: 150px; /* adjust as needed */
+  max-height: 150px;
   overflow-y: auto;
-  margin-top: 20px;
-
   border-radius: 5px;
   padding: 15px;
   background: none;
@@ -129,6 +127,12 @@ ol {
 }
 p strong {
   color: #93b554;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  color: #d5f3a6;
+  margin: 30px 0;
 }
 @media (max-width: 960px) {
   li {
