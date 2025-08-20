@@ -140,4 +140,7 @@ p strong {
   li strong {
     color: #93b554;
   }
+  .btn-delete {
+    font-size: 14px;
+  }
 }
