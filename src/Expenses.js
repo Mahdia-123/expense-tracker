@@ -59,6 +59,7 @@ export default function Expenses() {
             <option value="Savings">Savings 💰</option>
             <option value="Cosmatics">Cosmatics 💄</option>
             <option value="Vacation">Vacation ✈️</option>
+            <option value="Repairs">Repairs 🛠</option>
           </select>
           <button className="btn" onClick={addExpense}>
             Add{" "}
