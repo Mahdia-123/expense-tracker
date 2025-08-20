@@ -59,6 +59,8 @@ li {
   gap: 10px;
   padding: 10px;
   transition: all 0.2s ease-in-out;
+  align-items: center;
+  font-size: 14px;
 }
 
 li:hover {
@@ -79,6 +81,10 @@ ol {
   font-weight: bold;
   font-size: 16px;
   transition: all 300ms ease-in-out;
+}
+.btn-delete:hover {
+  color: #485a2a;
+  cursor: pointer;
 }
 section p {
   text-align: center;
