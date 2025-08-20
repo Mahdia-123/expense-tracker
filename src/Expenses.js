@@ -91,7 +91,9 @@ export default function Expenses() {
           />
         </div>
       )}
-      <h3 style={{ display: loading ? "none" : "block" }}>Expenses</h3>
+      <h3 style={{ display: !total || loading === true ? "none" : "block" }}>
+        Expenses
+      </h3>
       {!loading && expense.length > 0 && (
         <section>
           <ol>
@@ -118,7 +120,10 @@ export default function Expenses() {
           </ol>
         </section>
       )}
-      <p className="p">
+      <p
+        className="p"
+        style={{ display: !total || loading === true ? "none" : "block" }}
+      >
         <strong>Total expenses: </strong> {total} Af
       </p>
     </div>
