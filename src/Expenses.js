@@ -91,10 +91,9 @@ export default function Expenses() {
           />
         </div>
       )}
-
+      <h3 style={{ display: loading ? "none" : "block" }}>Expenses</h3>
       {!loading && expense.length > 0 && (
         <section>
-          <h3>Expenses</h3>
           <ol>
             {expense.map((e, index) => (
               <li key={index}>
@@ -117,11 +116,11 @@ export default function Expenses() {
               </li>
             ))}
           </ol>
-          <p className="p">
-            <strong>Total expenses: </strong> {total} Af
-          </p>
         </section>
       )}
+      <p className="p">
+        <strong>Total expenses: </strong> {total} Af
+      </p>
     </div>
   );
 }
