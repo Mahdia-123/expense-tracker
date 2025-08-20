@@ -1,0 +1,84 @@
+import React, { useState } from "react";
+import "./Expenses.css";
+
+export default function Expenses() {
+  const [description, setDescription] = useState("");
+  const [amount, setAmount] = useState("");
+  const [category, setCategory] = useState("food");
+  const [expense, setExpense] = useState([]);
+  function addExpense() {
+    if (!description || !amount) return;
+    const newExpense = {
+      description,
+      amount: Number(amount),
+      category: category,
+    };
+    setExpense([...expense, newExpense]);
+    setDescription("");
+    setAmount("");
+  }
+  function deleteExpense(index) {
+    const updated = expense.filter((_, i) => i !== index);
+    setExpense(updated);
+  }
+  const total = expense.reduce((sum, e) => sum + e.amount, 0);
+  return (
+    <div className="contaner">
+      <div className="expenses">
+        <div className="inputs">
+          <input
+            type="text"
+            placeholder="expenses Description.."
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <input
+            type="number"
+            value={amount}
+            placeholder="amount"
+            onChange={(e) => setAmount(e.target.value)}
+          />
+          <select
+            value={category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
+            <option value="food">Food</option>
+            <option value="transport">Transport</option>
+            <option value="sopping">Shopping</option>
+          </select>
+          <button className="btn" onClick={addExpense}>
+            Add{" "}
+          </button>
+        </div>
+      </div>
+      <section>
+        <h3>Expenses</h3>
+        <ol>
+          {expense.map(function (e, index) {
+            return (
+              <li key={index}>
+                <span>{index + 1}.</span>
+                <strong>Description:</strong>
+                {e.description} <strong>Amount:</strong>
+                {e.amount} Af
+                <strong>Category:</strong>
+                {e.category}
+                <button
+                  className="btn-delete"
+                  onClick={() => deleteExpense(index)}
+                >
+                  Delete
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+        <p>
+          {" "}
+          <strong>Total expenses: </strong>
+          {total} Af
+        </p>
+      </section>
+    </div>
+  );
+}
