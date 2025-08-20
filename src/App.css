@@ -1,8 +1,36 @@
+html,
 body {
-  background-color: #f6f9ef;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh; /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../public/images/iStock-576605112.webp"); /* image from public folder */
+  background-size: cover; /* cover entire div */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 h1 {
   text-align: center;
-  color: #485a2a;
+  color: #d5f3a6;
   margin-top: 50px;
+}
+footer {
+  text-align: center;
+  font-size: 16px;
+  color: #d5f3a6;
+}
+footer a {
+  color: #d5f3a6;
+  font-weight: bold;
+  transition: all 300ms ease-in-out;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

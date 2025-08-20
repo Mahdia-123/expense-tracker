@@ -35,7 +35,7 @@ export default function Expenses() {
         <div className="inputs">
           <input
             type="text"
-            placeholder="expenses Description.."
+            placeholder="Expenses Description.."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
@@ -53,14 +53,19 @@ export default function Expenses() {
             <option value="Transport">Transport 🚗</option>
             <option value="Shopping">Shopping 🛍</option>
             <option value="Home Rent">Home 🏡</option>
+            <option value="Entertainment">Entertainment 🎬</option>
+            <option value="Health">Health 💊</option>
+            <option value="Education">Education 📚</option>
+            <option value="Savings">Savings 💰</option>
+            <option value="Cosmatics">Cosmatics 💄</option>
           </select>
           <button className="btn" onClick={addExpense}>
             Add{" "}
           </button>
         </div>
       </div>
+      <h3>Expenses</h3>
       <section>
-        <h3>Expenses</h3>
         <ol>
           {expense.map(function (e, index) {
             return (
@@ -85,12 +90,10 @@ export default function Expenses() {
             );
           })}
         </ol>
-        <p>
-          {" "}
-          <strong>Total expenses: </strong>
-          {total} Af
-        </p>
       </section>
+      <p className="p" style={{ display: total > 0 ? "block" : "none" }}>
+        <strong>Total expenses: </strong> {total} Af
+      </p>
     </div>
   );
 }
