@@ -30,7 +30,7 @@ export default function Expenses() {
     localStorage.setItem("expenses", JSON.stringify(expense));
   }, [expense]);
   return (
-    <div className="contaner">
+    <div className="container">
       <div className="expenses">
         <div className="inputs">
           <input
@@ -66,11 +66,15 @@ export default function Expenses() {
             return (
               <li key={index}>
                 <span>{index + 1}.</span>
-                <strong>Description:</strong>
-                {e.description} <strong>Amount:</strong>
-                {e.amount} Af
-                <strong>Category:</strong>
-                {e.category}
+                <div>
+                  <strong>Description:</strong> {e.description}
+                </div>{" "}
+                <div>
+                  <strong>Amount:</strong> {e.amount} Af
+                </div>
+                <div>
+                  <strong>Category:</strong> {e.category}
+                </div>
                 <button
                   className="btn-delete"
                   onClick={() => deleteExpense(index)}

@@ -101,3 +101,13 @@ section p {
 section p strong {
   color: #93b554;
 }
+@media (max-width: 960px) {
+  li {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .container {
+    padding: 10px;
+  }
+}
