@@ -17,14 +17,14 @@ function App() {
           </a>
           and is{" "}
           <a
-            href="https://github.com/Mahdia-123/smart-to-to-list"
+            href="https://github.com/Mahdia-123/expense-tracker"
             rel="noreferrer"
           >
             Open-sourced{" "}
           </a>
           and hosted on{" "}
           <a
-            href="https://my-friendly-to-do-list.netlify.app/"
+            href="https://modern-expense-tracker-app.netlify.app/"
             rel="noreferrer"
           >
             Netlify
