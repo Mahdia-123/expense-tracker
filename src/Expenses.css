@@ -13,7 +13,7 @@
   justify-content: space-between;
   gap: 10px;
   position: sticky;
-  top: 0; /* distance from top of viewport */
+  top: 0;
   z-index: 100;
 }
 input,
@@ -28,8 +28,8 @@ select {
   border: 1px solid #93b554;
   border-radius: 5px;
   font-size: 16px;
-  appearance: none; /* removes default arrow in some browsers */
-  background: white
+  appearance: none;
+  /background: white
     url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>")
     no-repeat right 10px center;
   background-size: 16px;
